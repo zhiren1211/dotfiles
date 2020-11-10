@@ -156,6 +156,22 @@ zstyle ':completion::complete:*' use-cache true
 autoload bashcompinit && bashcompinit
 complete -C '/usr/bin/aws_completer' aws
 
-# nvmのインストール
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# anyenv のインストール
+if [[ ! -d ~/.anyenv ]];then
+  git clone https://github.com/riywo/anyenv ~/.anyenv
+fi
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# envs のインストール
+if [[ ! -d ~/.anyenv/envs/rbenv ]];then
+  anyenv install rbenv
+fi
+
+if [[ ! -d ~/.anyenv/envs/pyenv ]];then
+  anyenv install pyenv
+fi
+
+if [[ ! -d ~/.anyenv/envs/nodenv ]];then
+  anyenv install nodenv
+fi
