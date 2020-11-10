@@ -175,3 +175,4 @@ fi
 if [[ ! -d ~/.anyenv/envs/nodenv ]];then
   anyenv install nodenv
 fi
+
