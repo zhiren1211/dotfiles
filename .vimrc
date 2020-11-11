@@ -42,11 +42,11 @@ augroup MyXML
 augroup END>>>>>>>>>>>>>>>
 
 if has('vim_starting')
-     set runtimepath+=~/.vim/bundle/neobundle.vim/
-     if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-         echo "install NeoBundle..."
-         :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-     endif
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+        echo "install NeoBundle..."
+        call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+    endif
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -60,3 +60,8 @@ call neobundle#end()
 filetype plugin indent on
 
 NeoBundleCheck
+
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:_
+hi NonText ctermfg=59
+hi SpecialKey ctermfg=59
+set list
