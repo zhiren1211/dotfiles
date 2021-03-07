@@ -53,7 +53,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 
