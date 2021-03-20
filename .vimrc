@@ -63,4 +63,3 @@ NeoBundleCheck
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:_
 hi NonText ctermfg=59
 hi SpecialKey ctermfg=59
-set list
